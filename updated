@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
 
+    <style>
+        body {
+            background: #f4f6f9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            color: #444;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #0066ff;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0,102,255,0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0066ff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #004bd1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Student Registration</h2>
+
+        <form>
+
+            <!-- Student UID -->
+            <label>Student UID:</label>
+            <input 
+                type="text" 
+                placeholder="Enter unique student ID"
+                pattern="[A-Za-z0-9]{6,12}"
+                title="UID should be 6-12 alphanumeric characters"
+                required
+            >
+
+            <!-- Name -->
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <!-- Email -->
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <!-- Phone Number -->
+            <label>Phone Number:</label>
+            <input 
+                type="tel" 
+                placeholder="10-digit phone number"
+                pattern="[0-9]{10}"
+                required
+            >
+
+            <!-- Age -->
+            <label>Age:</label>
+            <input type="number" placeholder="Enter your age" min="10" max="30" required>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <select required>
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <!-- Course -->
+            <label>Course:</label>
+            <select required>
+                <option value="">Select Course</option>
+                <option>B.Tech</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>B.Sc IT</option>
+                <option>MCA</option>
+            </select>
+
+            <!-- Address -->
+            <label>Address:</label>
+            <textarea rows="3" placeholder="Enter your full address" required></textarea>
+
+            <!-- Submit -->
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
