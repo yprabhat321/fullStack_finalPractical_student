@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            background: #f4f6f9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            border-color: #0066ff;
+            outline: none;
+            box-shadow: 0 0 4px rgba(0,102,255,0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0066ff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #004bd1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Student Registration</h2>
+
+        <form>
+
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your full name" required>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Age:</label>
+            <input type="number" placeholder="Enter your age" min="10" max="30" required>
+
+            <button type="submit">Register</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
